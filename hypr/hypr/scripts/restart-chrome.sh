@@ -1,0 +1,3 @@
+#!/bin/bash
+
+google-chrome-stable --password-store=gnome-libsecret

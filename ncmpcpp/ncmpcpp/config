@@ -1,0 +1,11 @@
+mpd_music_dir = "~/Music"
+
+visualizer_data_source = "/tmp/mpd.fifo"
+visualizer_output_name = "visualizer"
+
+visualizer_in_stereo = "yes"
+visualizer_type = "spectrum"  # Options: spectrum, wave, ellipse
+visualizer_look = "●▮"        # Customize visual effect
+visualizer_fps = 60
+
+execute_on_song_change = "/home/cliff/.local/bin/songinfo"

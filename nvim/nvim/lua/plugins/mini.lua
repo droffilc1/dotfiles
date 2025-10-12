@@ -1,11 +1,10 @@
 return {
   {
-    'echasnovski/mini.nvim',
-    enabled = true,
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
-      local statusline = require 'mini.statusline'
-      statusline.setup { use_icons = true }
+      require('lualine').setup()
     end
   },
-  { 'wakatime/vim-wakatime', lazy = false }
+  { 'wakatime/vim-wakatime', lazy = false },
 }

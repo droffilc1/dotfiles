@@ -20,12 +20,12 @@ opt.conceallevel = 2
 opt.list = true
 opt.listchars = { tab = "▏ ", trail = "·", nbsp = "␣" }
 opt.fillchars = {
-	foldopen = "",
-	foldclose = "",
-	fold = " ",
-	foldsep = " ",
-	diff = "╱",
-	eob = " ",
+  foldopen = "",
+  foldclose = "",
+  fold = " ",
+  foldsep = " ",
+  diff = "╱",
+  eob = " ",
 }
 
 -- Search
@@ -43,6 +43,7 @@ opt.breakindent = true
 opt.undofile = true
 opt.inccommand = "split"
 opt.confirm = true
+opt.autowrite = true
 
 -- Performance
 opt.updatetime = 250
@@ -50,14 +51,14 @@ opt.timeoutlen = 300
 
 -- Sessions
 opt.sessionoptions = {
-	"buffers",
-	"curdir",
-	"tabpages",
-	"winsize",
-	"help",
-	"globals",
-	"skiprtp",
-	"folds",
+  "buffers",
+  "curdir",
+  "tabpages",
+  "winsize",
+  "help",
+  "globals",
+  "skiprtp",
+  "folds",
 }
 
 -- Backup
@@ -68,5 +69,5 @@ opt.formatoptions:append("r")
 
 -- Clipboard (sync with OS)
 vim.schedule(function()
-	opt.clipboard = "unnamedplus"
+  opt.clipboard = "unnamedplus"
 end)

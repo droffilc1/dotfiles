@@ -14,3 +14,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "sh", "zsh", "bash" },
+  callback = function()
+    vim.b.autoformat = false    -- for conform.nvim
+    vim.b.disable_autoformat = true -- for other formatters
+  end,
+})

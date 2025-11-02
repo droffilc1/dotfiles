@@ -23,7 +23,6 @@
     "custom/notification",
     "custom/power"
   ],
-  // Essential modules only
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,

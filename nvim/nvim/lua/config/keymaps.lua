@@ -10,6 +10,9 @@ vim.g.maplocalleader = " "
 keymap("n", "<ESC>", ":noh<CR>", opts)
 keymap("i", "jk", "<ESC>", opts)
 
+-- Reload config
+keymap("n", "<leader>rr", ":source $MYVIMRC<CR>", { desc = "Reload config" })
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -38,7 +41,7 @@ keymap("n", "<leader>bD", "<cmd>:bd<cr>", { desc = "Delete Buffer and Window" })
 
 -- Delete buffer with built-in function
 keymap("n", "<leader>bd", function()
-  vim.cmd("bdelete")
+	vim.cmd("bdelete")
 end)
 
 -- Quickfix
@@ -47,8 +50,8 @@ keymap("n", "<M-k>", "<cmd>cprev<CR>")
 
 -- Terminal
 keymap("n", "<leader>st", function()
-  vim.cmd.vnew()
-  vim.cmd.term()
-  vim.cmd.wincmd("J")
-  vim.api.nvim_win_set_height(0, 15)
+	vim.cmd.vnew()
+	vim.cmd.term()
+	vim.cmd.wincmd("J")
+	vim.api.nvim_win_set_height(0, 15)
 end)

@@ -42,7 +42,7 @@ return {
 			"folke/lazydev.nvim",
 		},
 		opts = function()
-			require("vim-react-snippets").lazy_load()
+			require("vim-react-snippets")
 			local config = require("vim-react-snippets.config")
 			config.readonly_props = false
 			config.test_framework = "vitest"

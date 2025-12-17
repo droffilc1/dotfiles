@@ -10,6 +10,8 @@ vim.lsp.enable({
 	"tailwindcss",
 	"eslint",
 	"bashls",
+	"jdtls",
+	"hyprls",
 })
 
 vim.diagnostic.config({

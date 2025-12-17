@@ -23,18 +23,21 @@ source $ZSH/oh-my-zsh.sh
 
 # fastfetch. Will be disabled if above colorscript was chosen to install
 # fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
+if [ -z "$DISPLAY" ] && [ "$(tty)" != "/dev/tty1" ]; then
+    unset WAYLAND_DISPLAY
+fi
 
 declare -A pomo_options
 pomo_options["work"]="45"
 pomo_options["break"]="10"
 
 pomodoro () {
-if [ -n "$1" -a -n "${pomo_options["$1"]}" ]; then
-val=$1
-echo "$val" | lolcat
-timer "${pomo_options["$val"]}"m
-spd-say "$val session done"
-fi
+  if [ -n "$1" -a -n "${pomo_options["$1"]}" ]; then
+    val=$1
+    echo "$val" | lolcat
+    timer "${pomo_options["$val"]}"m
+    spd-say "$val session done"
+  fi
 }
 
 alias wo="pomodoro 'work'"
@@ -47,7 +50,7 @@ alias v='nvim'
 alias ns='NVIM_APPNAME="nvim-start" nvim'
 alias ne='NVIM_APPNAME="nvimexample" nvim'
 alias nt='NVIM_APPNAME="nvim-test" nvim'
-alias pn=pnpm
+alias pn='pnpm'
 
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)
@@ -84,3 +87,4 @@ export NVM_DIR="$HOME/.config/nvm"
 
 # Created by `pipx` on 2025-10-22 20:39:10
 export PATH="$PATH:/home/cliff/.local/bin"
+export PATH="$PATH:/home/cliff/.cargo/bin"

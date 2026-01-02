@@ -8,4 +8,4 @@ visualizer_type = "spectrum"  # Options: spectrum, wave, ellipse
 visualizer_look = "●▮"        # Customize visual effect
 visualizer_fps = 60
 
-execute_on_song_change = "/home/cliff/.local/bin/songinfo"
+execute_on_song_change = "~/.local/bin/songinfo"

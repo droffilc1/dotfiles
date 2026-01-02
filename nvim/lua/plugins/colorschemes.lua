@@ -22,6 +22,7 @@ return {
 		"ellisonleao/gruvbox.nvim",
 		lazy = false,
 		priority = 1000,
+		transpoarent = false,
 	},
 
 	-- Solarized Osaka
@@ -37,4 +38,35 @@ return {
 
 	-- vn-night
 	{ "nxvu699134/vn-night.nvim" },
+
+	-- kanagawa
+	{ "rebelot/kanagawa.nvim" },
+
+	-- one-dark
+	-- Using Lazy
+	{
+		"navarasu/onedark.nvim",
+		priority = 1000,
+		config = function()
+			require("onedark").setup({
+				style = "darker",
+			})
+			require("onedark").load()
+		end,
+	},
+	-- everblush
+	{ "Everblush/nvim" },
+	-- biscuit
+	{
+		"Biscuit-Theme/nvim",
+		name = "biscuit",
+	},
+	-- fullerene
+	{
+		"steguiosaur/fullerene.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	--oxocarbon
+	{ "nyoom-engineering/oxocarbon.nvim" },
 }

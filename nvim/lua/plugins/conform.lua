@@ -36,7 +36,6 @@ return {
 				typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 				typescript = { "prettierd", "prettier", stop_after_first = true },
 				javascriptreact = { "prettierd", "prettier", stop_after_first = true },
-				java = { "google-java-format" },
 				json = { "deno_fmt" },
 				jsonc = { "deno_fmt" },
 				sh = { "shfmt" },

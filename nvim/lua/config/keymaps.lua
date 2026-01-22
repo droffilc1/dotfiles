@@ -13,6 +13,9 @@ keymap("i", "jk", "<ESC>", opts)
 -- Reload config
 keymap("n", "<leader>rr", ":source $MYVIMRC<CR>", { desc = "Reload config" })
 
+keymap("n", "<leader>w", ":write<CR>", { desc = "Write file" })
+keymap("n", "<leader>q", ":quit<CR>", { desc = "Quit neovim" })
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
